@@ -15,6 +15,7 @@ def get_html(site): # html страницы текстом
     return html
     
 def make_folds(subroot): #создаёт папки длягодов и месяцов
+    os.makedirs('rassvet/' + subroot + '/2014-2016')
     n = 2014
     while n < 2017:
         for a in range (12):
@@ -22,14 +23,6 @@ def make_folds(subroot): #создаёт папки длягодов и меся
             if not os.path.exists(dirpath):
                 os.makedirs(dirpath)
         n += 1
-        
-def del_empty(theroot): #удаляет пустые папки
-    for root, dirs, files in os.walk(theroot):
-        try:
-            os.rmdir(root)
-        except:
-            pass
-
     
 def get_articles_from_homepage(site):
     info1 = re.findall('((?:<div class="allmode-item">|<div class="allmode-details">).*?)(?:<div class="allmode-item">|<.div><.div><.div>)', get_html(site), re.DOTALL)
@@ -84,7 +77,7 @@ def art_nums(articles): #из массива с информацией про с
         art_numms.append(a)
         
     nums = []
-    for n in range (1,240):
+    for n in range (1,250):
         nums.append(str(n))
         
     not_numms = []
@@ -110,12 +103,6 @@ def news_no_date(nums):
         a = ['no_title', 'no date', 'Новости', element]
         news_info.append(a)
     return news_info
-
-def get_articles(all_arts):
-    for element in all_arts:
-        req = urllib.request.Request(element[3])
-        with urllib.request.urlopen(req) as response:
-            html = response.read().decode('utf-8')
             
                    
 
@@ -126,10 +113,11 @@ def main():
     make_folds('mystem_xml')
     val1 = news_no_date(art_nums(val))
     all_articles = val + val1  #массив информации о всех статьях в формате [Заголовок Дата Рубрика Ссылка] только некоторых заголовков не хватает
-    val2 = get_articles(all_articles)
-
-    
-#    del_empty('./rassvet')
+    doc = open('result_of_part_1.txt', 'w', encoding='utf-8')
+    for element in all_articles:
+        a = ';;'.join(element)
+        doc.write(a+'\n')
+    doc.close()
 
 if __name__ ==  '__main__':
     main()
