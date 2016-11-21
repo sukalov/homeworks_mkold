@@ -1,0 +1,34 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<div class="header1" align="center">ОПРОС</div>
+<div class="intro" align="justify">
+	Данный опрос состоит из трёх небольших частей. 
+	В первой части опрашиваемому нужно дать некоторую информацию о себе, 
+	во второй интерпретировать несколько похожих друг на друга предложений 
+	и в третьей оценить правильность написанных предложений. Надеюсь, 
+	непонятных моментов не возникнет. 
+	<div align="center">Все поля опроса обязательны к заполнению,</div>
+	<div align="center">кроме адреса электронной почты</div>
+</div>
+<body class = 'page'>
+<div class = 'part'>часть 1</div>
+<form name="user_info"class = 'parent pagecenter'>
+	пол:<br>
+	<input type="radio" required="true" name="sex" value="мужской" /> мужской<br>
+	<input type="radio" required="true" name="sex" value="женский" /> женский<br><br>
+    возраст:&nbsp;<input type="text" name="age" required="true">&nbsp;лет<br></div><br>
+    город, в котором вы провели большую часть жизни: &nbsp;<input type="text" name="city" required="true"><br><br>
+    электронный адрес, если вы хотели бы получить результаты: &nbsp;<input type="text" name="email"><br><br>
+    <div class="submit"><input type="submit" class="button15" value="далее"/></div>	
+</form>
+<div class="note_block" align="center">
+	чтобы попасть на страницы stats, results и search достаточно пройти опрос<br>
+	или же на страницу с результатами можно просто перейти по кнопке 
+	<form action="/finish">
+    	<div><input type="submit" class="button15 submit3" value="finish"/></div>
+    </form>	
+</div>
+	
+</body>

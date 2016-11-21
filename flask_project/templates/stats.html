@@ -1,0 +1,20 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<div class="header1" align="center">СТАТИСТИКА</div>
+<div class="intro" align="justify"> На этой странице представлена статистика ответов. То есть для каждого вопроса есть таблица с данными о том, сколько людей как ответили.</div>
+<body class="page">
+<div name="stats_body"class = 'parent pagecenter json_block'>
+	{% for question in questions %}
+		<table border='1' align="center" class="stats_table">
+		  <caption style="font-size:25px">{{ question[0] }}</caption>
+		  {% for answer in question[1] %}
+			<tr>
+				<td class="left_cell">{{ answer[0] }}</td><td class="right_cell">{{ answer[1] }}</td>
+ 	 	 	</tr>
+ 	 	  {% endfor %}
+		</table>
+		<br><br>
+    {% endfor %}
+</body>

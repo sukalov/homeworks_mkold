@@ -1,0 +1,27 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<div class="header1" align="center">РЕЗУЛЬТАТЫ ПОИСКА</div>
+<div class="intro" align="center"> Условия поиска 
+<table border='1' align="center" class="res_request">
+<tr><td class="left_cell2">пол</td><td class="right_cell2">{{ sex }}</td></tr>
+<tr><td class="left_cell2">минимальный возраст</td><td class="right_cell2">{{ age_min }}</td></tr>
+<tr><td class="left_cell2">максимальный возраст</td><td class="right_cell2">{{ age_max }}</td></tr>
+<tr><td class="left_cell2">город</td><td class="right_cell2">{{ city }}</td></t>
+</table>
+</div>
+<body class="page">
+<div name="stats_body"class = 'parent pagecenter json_block'>
+	{% for question in questions %}
+		<table border='1' align="center" class="stats_table">
+		  <caption style="font-size:25px">{{ question[0] }}</caption>
+		  {% for answer in question[1] %}
+			<tr>
+				<td class="left_cell">{{ answer[0] }}</td><td class="right_cell">{{ answer[1] }}</td>
+ 	 	 	</tr>
+ 	 	  {% endfor %}
+		</table>
+		<br><br>
+    {% endfor %}
+</body>

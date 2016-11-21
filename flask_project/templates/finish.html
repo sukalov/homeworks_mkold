@@ -1,0 +1,18 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<div class="header1" align="center">СПАСИБО ЕСЛИ ВЫ ПРОШЛИ ОПРОС</div>
+<div class="intro" align="justify">
+	Здесь предоставлены результаты опроса собранные к данному моменту. ПОИСК позволит вам произвести поиск результатов опроса по определённому параметру. JSON и СТАТИСТИКА покажут все результаты сразу.
+</div>
+<body class="page">
+<div name="results_links" class = 'pagecenter finish_block' align="center">
+<ul>
+    {% for name, url in links.items() %}
+    <form action="{{ url }}">
+    <button type="submit" class = "finish_submit button15 big15">{{ name }}</button><br>
+    </form>
+    {% endfor %}
+</ul>
+</body>
