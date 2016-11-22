@@ -274,4 +274,4 @@ def results():
     return render_template('results.html', questions=questions, sex=sex, age_min=age_min, age_max=age_max, city=city)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
