@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="static/style.css">
 </head>
 <div class="header1" align="center">РЕЗУЛЬТАТЫ ПОИСКА</div>
-<div class="intro" align="center"> Условия поиска 
+<div class="intro" align="center">условия поиска 
 <table border='1' align="center" class="res_request">
 <tr><td class="left_cell2">пол</td><td class="right_cell2">{{ sex }}</td></tr>
 <tr><td class="left_cell2">минимальный возраст</td><td class="right_cell2">{{ age_min }}</td></tr>
@@ -11,6 +11,7 @@
 <tr><td class="left_cell2">город</td><td class="right_cell2">{{ city }}</td></t>
 </table>
 </div>
+<div class = "fini_part"><form action="/finish"><input type="submit" class="button15" value="finish"/></form></div>
 <body class="page">
 <div name="stats_body"class = 'parent pagecenter json_block'>
 	{% for question in questions %}

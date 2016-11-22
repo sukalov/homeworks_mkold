@@ -93,6 +93,14 @@
   background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
   transition: all .218s ease 0s;}
   
+  	.fini_part{
+ 	 font: 12pt serif;   
+ 	 width:  50px;
+	 padding: 5px;
+	 left: 47.5%;
+	 position: absolute;
+ 	 top: 27.8%;}
+ 	 
 	.button15:hover {
   color: rgb(24,24,24);
   border: 1px solid rgb(198,198,198);

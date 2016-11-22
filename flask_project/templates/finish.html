@@ -7,6 +7,7 @@
 	Здесь предоставлены результаты опроса собранные к данному моменту. ПОИСК позволит вам произвести поиск результатов опроса по определённому параметру. JSON и СТАТИСТИКА покажут все результаты сразу.
 </div>
 <body class="page">
+<div>
 <div name="results_links" class = 'pagecenter finish_block' align="center">
 <ul>
     {% for name, url in links.items() %}
@@ -15,4 +16,8 @@
     </form>
     {% endfor %}
 </ul>
+</div>
+<form action="/">
+    	<div><input type="submit" class="button15 submit" value="в начало опроса"/></div>
+</form>	
 </body>
