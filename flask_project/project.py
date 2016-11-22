@@ -42,6 +42,7 @@ def get_results_json():
         respondent += 1   	
 
     json_string = json.dumps(data_dic, ensure_ascii=False, separators=(',', ':'), indent=4, sort_keys=True)
+    results.close()
     return json_string
 
 def frequency_array(words):
