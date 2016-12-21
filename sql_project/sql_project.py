@@ -42,8 +42,9 @@ def second_table1():
     text0 = text.read()
     text.close()
     text1 = re.sub('( +\n*)+', ' ', text0)
-    textarr = text1.split(' ')
-    regex = '(\W*)?(\w*)(\W*)?'
+    textarr = re.split(' |\n', text1)
+    regex = '(\W*)?(\w+(?:\W\w+)*)(\W*)?'
+    
     n = 0
     tokens = []
     for element in textarr:
@@ -61,6 +62,7 @@ def second_table1():
         arr = [n, punc1, res.group(2), punc2]
         n += 1
         tokens.append(arr)
+
 
     return tokens
 
@@ -109,7 +111,5 @@ def index():
 def end():
     return render_template('end.html', url=url_for('index'))
 
-
 if __name__ == '__main__':
-    app.run()
-    
+    app.run(debug=True)
