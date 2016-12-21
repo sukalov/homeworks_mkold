@@ -63,7 +63,6 @@ def second_table1():
         n += 1
         tokens.append(arr)
 
-
     return tokens
 
 def second_table2(tokens, lemmes, where_sql):
