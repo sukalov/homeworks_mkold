@@ -1,0 +1,8 @@
+INSERT INTO analyses (id, wordform, lemma) VALUES ("0", "в", "в")
+INSERT INTO analyses (id, wordform, lemma) VALUES ("2", "дело", "дело")
+INSERT INTO analyses (id, wordform, lemma) VALUES ("1", "шляпе", "шляпа")
+
+
+INSERT INTO tokens (id, analyses_id, token, punctuation_before, punctuation_after) VALUES ("0, 2, дело, , ")
+INSERT INTO tokens (id, analyses_id, token, punctuation_before, punctuation_after) VALUES ("1, 0, в, , ")
+INSERT INTO tokens (id, analyses_id, token, punctuation_before, punctuation_after) VALUES ("2, 1, шляпе, , ")

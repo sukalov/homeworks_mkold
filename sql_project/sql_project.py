@@ -41,9 +41,9 @@ def second_table1():
     text = open('text.txt', 'r', encoding='utf-8')
     text0 = text.read()
     text.close()
-    text1 = re.sub('( *\n*)*', ' ', text0)
-    textarr = re. split(' |\\n', text1)
-    regex = '(\W*)?(\w+)(\W)?'
+    text1 = re.sub('( +\n*)+', ' ', text0)
+    textarr = text1.split(' ')
+    regex = '(\W*)?(\w*)(\W*)?'
     n = 0
     tokens = []
     for element in textarr:
@@ -77,14 +77,39 @@ def second_table2(tokens, lemmes, where_sql):
 
 def main(filename):
     mysteming('text.txt', 'lemmes.txt')
-    val = first_table('sqlcode.txt')
+    val = first_table(filename)
     second_table2(second_table1(), val, filename)
 
 app = Flask(__name__)
 @app.route('/')
 def index():
+    if request.args:
+        try:
+            name = request.args['sql_name']
+            if name != '' and name != ' ':
+                filename = name + '.txt'
+            else:
+                filename = 'sql.txt'
+        except:
+            filename = 'sql.txt'
+
+        text = request.args['text']
+        res = re.search('\w', text)
+        if res:
+            file = open('text.txt', 'w', encoding='utf-8')
+            file.write(text)
+            file.close()
+        else:
+            pass
+        main(filename)
+        return redirect(url_for('end'))
     return render_template ('home.html')
 
+@app.route('/end')
+def end():
+    return render_template('end.html', url=url_for('index'))
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
     
