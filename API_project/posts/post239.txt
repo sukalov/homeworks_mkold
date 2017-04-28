@@ -1,0 +1,82 @@
+— Привет. 
+— Привет. 
+— Как там ваши дела с Кристиной? Еще не поженились? 
+— Нет, мы расстались. 
+— А что случилось? 
+— Мне надоело, у нее были слишком большие запросы. 
+— Например какие? 
+— Ну например update instance inner join (select groupid as group_id, (select messageid from message inner join thread on threadid = message.thread_id where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%') order by message.created desc limit 1) as last_message_id, (select count(*) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as thread_count, (select if(sum(thread.message_count) is null, 0, sum(thread.message_count)) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as message_count from group where @group_key like concat(`key`, '.%')) as statistics on statistics.group_id = instance.group_id set instance.message_id = statistics.last_message_id, instance.thread_count = statistics.thread_count, instance.message_count = statistics.message_count where instance.location_id = @location_id and instance.language_id = @language_id;
+
+-----------
+КОММЕНТАРИИ:
+-----------
+
+вы ебанулись? как я это должен переделывать?
+
+— Привет.<br>— Привет.<br>— Как там ваши дела с Кристиной? Еще не поженились?<br>— Нет, мы расстались.<br>— А что случилось?<br>— Мне надоело, у нее были слишком большие запросы.<br>— Например какие?<br>— Ну например update instance inner join (select groupid as group_id, (select messageid from message inner join thread on threadid = message.thread_id where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%') order by message.created desc limit 1) as last_message_id, (select count(*) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as thread_count, (select if(sum(thread.message_count) is null, 0, sum(thread.message_count)) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as message_count from group where @group_key like concat(`key`, '.%')) as statistics on statistics.group_id = instance.group_id set instance.message_id = statistics.last_message_id, instance.thread_count = statistics.thread_count, instance.message_count = statistics.message_count where instance.location_id = @location_id and instance.language_id = @language_zachem v konec zaprosa palish?
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— У нее хуй видно.
+
+натуралам не понять
+
+Ну код же нихуя не читабелен, админ, хуле не форматируешь???
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— Мне надоело, у нее были слишком большие запросы. <br>— Например какие? <br>— Ну например update instance inner join (select groupid as group_id, (select messageid from message inner join thread on threadid = message.thread_id where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%') order by message.created desc limit 1) as last_message_id, (select count(*) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as thread_count, (select if(sum(thread.message_count) is null, 0, sum(thread.message_count)) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as message_count from group where @group_key like concat(`key`, I'M GAY '.%')) as statistics on statistics.group_id = instance.group_id set instance.message_id = statistics.last_message_id, instance.thread_count = statistics.thread_count, instance.message_count = statistics.message_count where instance.location_id = @location_id and instance.language_id = @language_id;
+
+Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— Мне надоело, у нее были слишком большие запросы. <br>— Например какие? <br>— Ну например Kakayota_hueten@ dlya/ P/IDorOv@
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— Мне надоело, у нее были слишком большие запросы. <br>— Например какие? <br>— Ну там показывать надо.
+
+Sql анек
+
+Я сюда деградировать пришел
+
+[id161498954|Антон], где ты код увидел
+
+[id139882917|Pavel], прямо тут, в тексте. Код на SQL'е
+
+ТОНКИЙ АЙТИШНЫЙ ЮМОР 👌
+
+DROP TABLE akb.anekiprointernetchikov;
+
+С такими запросами я бы тоже нахуй послал...
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось?<br>— Она пхп-кодер
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— Мне надоело, у нее были слишком большие запросы. <br>— Например какие? <br>— Ну например update instance inner join (select groupid as group_id, (select messageid from message inner join thread on threadid = message.thread_id where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%') order by message.created desc limit 1) as last_message_id, (select count(*) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as thread_count, (select if(sum(thread.message_count) is null, 0, sum(thread.message_count)) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as message_count from group where @group_key like concat(`key`, '.%')) as statistics on statistics.group_id = instance.group_id set instance.message_id = statistics.last_message_id, instance.thread_count = statistics.thread_count, instance.message_count = statistics.message_count where instance.location_id = @location_id and instance.language_id = @language_id;osobenno_id
+
+[id6102860|Александр], вот osobenno_id самое обидное. Могла бы обойтись без него.
+
+Anek grustnyj, na samom delete * from kamenty
+
+Я тут смотрю у Кристины дыра в безопосности.
+
+Чекните мою базу на большие запросы
+
+Но все мы знаем, что свинья - охуенная тема
+
+[id68510404|Виктор], вот так:<br>— Привет.<br>— Привет.<br>— Как там ваши дела с Кристиной? Еще не поженились?<br>— Нет, мы расстались.<br>— А что случилось?<br>— Мне надоело, у нее были слишком большие запросы.<br>— Например какие?<br>— Ну например update instance inner join (select groupid as group_id, (select messageid from message inner join thread on threadid = message.thread_id where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%') order by message.created desc limit 1) as last_message_id, (select count(*) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as thread_count, (select if(sum(thread.message_count) is null, 0, sum(thread.message_count)) from thread where location_id = @location_id and language_id = @language_id and concat(group_key, '.') like concat(group.`key`, '.%')) as message_count from group gay $ porn where @group_gay like concat(`key`, '.%')) as statistics on statistics.group_id = instance.group_id set instance.message_id = statistics.last_message_id, instance.thread_count = statistics.thread_count, instance.message_count = statistics.message_count where instance.location_id = @location_id and instance.language_id = @language_Id
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— Мне надоело, у нее были слишком большие запросы. <br>— Например какие? <br>— Ну например.<br>— Ясно.
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— Мы расстались.
+
+Я Кристина, поясните про запросы.
+
+может лучше ты и пояснишь?
+
+[id16923808|Кристина], критина. ха ха ха
+
+У меня так знакомый врач умер, в морге.
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— Я нашёл себе NoSQL-девушку.
+
+— Привет. <br>— Привет. <br>— Как там ваши дела с Кристиной? Еще не поженились? <br>— Нет, мы расстались. <br>— А что случилось? <br>— У нее хуй больше.
+
+))
+
+У нее слишком большие запросы!<br>- Милый ну пойдем, это совсем не страшно! У 50 оттенков хорошие отзывы!
+
+Я сюда деградировать пришёл, а не ребусы решать
+
+просто join, ничего сложного не вижу
