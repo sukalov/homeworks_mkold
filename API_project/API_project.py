@@ -21,7 +21,7 @@ def write_txt(what, where):
     doc.write(what)
     doc.close()
 
-def get_age(birthday, postday):
+def get_age(birthday, postday): #казалось важным узнавать возраст именно на момент написания поста
     age = postday.year - birthday.year
     if postday.month < birthday.month:
         age -= 1
