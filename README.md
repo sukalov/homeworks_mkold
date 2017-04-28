@@ -6,8 +6,7 @@
 
 ### project (проект 1)
 
-  <tr>[ссылка на дерево][этой форме](https://docs.google.com/forms/d/e/1FAIpQLSdXLd6WhYxHNU3SG6qLY-HObd6ZXGFfeHLpU-sHz3KsfDiXXw/viewform?c=0&w=1)(https://drive.google.com/drive/folders/0B0WR5yMzU9YzS05QNGYyN0tfRDQ?usp=sharing "ссылка на дерево")
-  [этой форме](https://docs.google.com/forms/d/e/1FAIpQLSdXLd6WhYxHNU3SG6qLY-HObd6ZXGFfeHLpU-sHz3KsfDiXXw/viewform?c=0&w=1)
+  [ссылка на дерево](https://drive.google.com/drive/folders/0B0WR5yMzU9YzS05QNGYyN0tfRDQ?usp=sharing)
 
   Программы судорожно доделывались в момент дедлайна, поэтому взаимодействие между ними так и не было настроено, а так же не     было сделано генеральной проверки . Создаётся лишняя папка exem, в которой лежат воспомогательные (промежуточные) файлы, и     эта папка так же не удаляется автоматически.
   
