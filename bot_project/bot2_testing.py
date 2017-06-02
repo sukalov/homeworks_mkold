@@ -35,7 +35,9 @@ def mysteming(text):
     lemmasarr = lemmasstr.split('\n')
     
     
-    ldic = lems_spread(lemmasarr)   
+    ldic = lems_spread(lemmasarr)
+
+    reply = []
     
     for word in ana:
         if 'analysis' in word and word['analysis'] != []:
@@ -54,11 +56,13 @@ def mysteming(text):
                     if gr2 == gr:
                         newword = str(res.group(1))
                         break
-            print(newword)
+            reply.append(newword)
             lex = word['analysis'][0]['lex']
+    return ' '.join(reply)
 
 def main():
-    mysteming(textik)
+    rl = mysteming(textik)
+    print(rl)
 
 if __name__ == '__main__':
     main()
