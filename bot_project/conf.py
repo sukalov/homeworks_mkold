@@ -1,3 +1,0 @@
-TOKEN = "338549032:AAFrzf9D2NnmPhxRKvY40u830OgE8H54wn0"
-WEBHOOK_HOST = 'sukalov.pythonanywhere.com'
-WEBHOOK_PORT = '443'  
