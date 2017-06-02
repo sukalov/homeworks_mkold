@@ -21,7 +21,6 @@ def lems_spread(la):
             else:
                 ld[el[1]] = []
                 ld[el[1]].append(el[0])
-
     return ld
 
 def mysteming(text):
@@ -32,13 +31,10 @@ def mysteming(text):
     lemmas = open('lemmas.txt', 'r', encoding='utf-8')
     lemmasstr = lemmas.read()
     lemmas.close()
-    lemmasarr = lemmasstr.split('\n')
-    
+    lemmasarr = lemmasstr.split('\n')   
     
     ldic = lems_spread(lemmasarr)
-
-    reply = []
-    
+    reply = []   
     for word in ana:
         if 'analysis' in word and word['analysis'] != []:
             gr = word['analysis'][0]['gr']
@@ -57,8 +53,10 @@ def mysteming(text):
                         newword = str(res.group(1))
                         break
             reply.append(newword)
-            lex = word['analysis'][0]['lex']
-    return ' '.join(reply)
+        
+        else:
+            reply.append(word['text'])
+    return ''.join(reply)
 
 def main():
     rl = mysteming(textik)
