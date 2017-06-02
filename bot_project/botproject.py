@@ -31,6 +31,9 @@ def wordcount(text):
         text1 = text1.replace('  ', ' ')
     textarr = text1.split(' ')
     return len(textarr)
+    
+def mystemit(text):
+	
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
